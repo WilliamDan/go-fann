@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/white-pony/go-fann"
 	"fmt"
+
+	"github.com/WilliamDan/go-fann"
 )
 
 func main() {
@@ -10,8 +11,7 @@ func main() {
 	const num_neurons_hidden = 30
 	const desired_error = 0.001
 
-
-	fmt.Println("Creating network.");
+	fmt.Println("Creating network.")
 
 	train_data := fann.ReadTrainFromFile("../../datasets/robot.train")
 
@@ -37,8 +37,7 @@ func main() {
 
 	fmt.Printf("MSE error on test data: %f\n", ann.GetMSE())
 
-
-	fmt.Println("Saving network.");
+	fmt.Println("Saving network.")
 	ann.Save("robot_float.net")
 	fmt.Println("Cleaning up.")
 

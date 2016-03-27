@@ -7,7 +7,7 @@ import (
 	//"log"
 	"os"
 
-	//	"github.com/white-pony/go-fann"
+	"github.com/WilliamDan/go-fann"
 )
 
 func prepareData() {

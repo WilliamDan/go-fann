@@ -1,11 +1,24 @@
 Go bindings for Fast Artificial Neural Networks(FANN) library.
+Thank White Pony
+
 http://leenissen.dk/fann/wp/
 
 To install:
 
-1. go get github.com/white-pony/go-fann
+1. go get github.com/WilliamDan/go-fann
 
 2. a) `cd example/example_name && go build` to build example
    b) ./example_name
 
+Please visit the api manual of FANN. 
+Here we got a new function:
 
+TrainData.PushExample(din []float64, dout []float64,nMax int);
+
+Firstly, create a new train data object:
+
+testData := fann.CreateTrain(2, 1)//create a train data with num_input =1 && num_output =2;
+
+testData.PushExample([]float64{1, 0.5}, []float64{0.5}, 5)
+//add a new group of input and output (an example) to the train data;
+//the last param is the max length of the num_data; if data->num_data is bigger then nMax,First In First Out;

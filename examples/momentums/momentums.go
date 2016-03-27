@@ -1,9 +1,11 @@
 package main
 
 import (
-	"github.com/white-pony/go-fann"
 	"fmt"
+
+	"github.com/WilliamDan/go-fann"
 )
+
 func main() {
 	const num_layers = 3
 	const num_neurons_hidden = 96
